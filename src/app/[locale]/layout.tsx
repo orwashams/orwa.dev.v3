@@ -1,9 +1,26 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Encode_Sans_Condensed, Vazirmatn, Rubik } from "next/font/google";
+import { cn } from "@/lib/utils";
+
 import "../globals.css";
+import { getCurrentLocale } from "@/locales/server";
 
-const inter = Inter({ subsets: ["latin"] });
+const encode_sans_condensed = Encode_Sans_Condensed({
+  subsets: ["latin"],
+  variable: "--font-english",
+  weight: "500",
+});
 
+const amatic_sc = Rubik({
+  subsets: ["hebrew"],
+  variable: "--font-hebrew",
+  weight: "500",
+});
+
+const vazirmatn = Vazirmatn({
+  subsets: ["arabic"],
+  variable: "--font-arabic",
+});
 export const metadata: Metadata = {
   title: "Orwa",
 
@@ -18,9 +35,22 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const locale = getCurrentLocale();
+
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html
+      lang="en"
+      className={`${encode_sans_condensed.variable} ${amatic_sc.variable} ${vazirmatn.variable}`}
+    >
+      <body
+        className={cn({
+          "font-english ": locale === "en",
+          "text-right font-hebrew  ": locale === "he",
+          "text-right font-arabic ": locale === "ar",
+        })}
+      >
+        {children}
+      </body>
     </html>
   );
 }

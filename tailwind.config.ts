@@ -36,6 +36,12 @@ const config: Config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+
+      fontFamily: {
+        english: ["var(--font-english)"],
+        hebrew: ["var(--font-hebrew)"],
+        arabic: ["var(--font-arabic)"],
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArrowDown } from "lucide-react";
 
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import {
@@ -19,7 +20,11 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
-import { getI18n } from "@/locales/server";
+import { getCurrentLocale, getI18n } from "@/locales/server";
+
+import RequestForm from "../RequestForm/RequestForm";
+
+import { cn } from "@/lib/utils";
 
 type Props = {
   name: string;
@@ -37,7 +42,7 @@ const WebsiteCard = async ({ name, discription, examples }: Props) => {
   return (
     <div className=" hover:bg-gradient-to-tr from-red-400 via-red-500 to-red-900  p-0.5 rounded-md ">
       <Dialog>
-        <DialogTrigger>
+        <DialogTrigger asChild>
           <Card
             className=" cursor-pointer w-80 h-96 flex flex-col justify-center items-center "
             role="button"
@@ -51,8 +56,9 @@ const WebsiteCard = async ({ name, discription, examples }: Props) => {
             <CardContent className="w-full flex justify-center items-center">
               <hr className="text-white p-1 w-1/2 " />
             </CardContent>
-            <CardContent>
-              <p className="font-bold">{t("general.examples")}:</p>
+            <CardContent className="flex">
+              <p>{t("general.examples")}</p>
+              <ArrowDown />
             </CardContent>
 
             <CardFooter className="flex justify-center  ">
@@ -75,8 +81,7 @@ const WebsiteCard = async ({ name, discription, examples }: Props) => {
           <DialogHeader>
             <DialogTitle>{name}</DialogTitle>
             <DialogDescription>
-              This action cannot be undone. This will permanently delete your
-              account and remove your data from our servers.
+              <RequestForm />
             </DialogDescription>
           </DialogHeader>
         </DialogContent>
@@ -89,7 +94,7 @@ const Cards = async () => {
   const t = await getI18n();
 
   return (
-    <div className="flex flex-wrap gap-6 justify-center ">
+    <div className="flex  flex-wrap gap-6 justify-center ">
       <div>
         <WebsiteCard
           name={t("templates.e_commerce.name")}

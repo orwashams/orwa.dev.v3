@@ -11,9 +11,14 @@ export default {
     description: "Description",
     examples: "Examples",
     link: "link",
-    pick: "Pick",
+    pick: "You can pick any option from the grid",
+    or_pick_custom: "Or you can request a custom software solution",
   },
   templates: {
+    custom: {
+      name: "Custom",
+      description: "A Custom software solution, based on your specific needs",
+    },
     e_commerce: {
       name: "E-commerce",
       description: "Online platforms for buying and selling goods or services",

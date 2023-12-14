@@ -11,9 +11,14 @@ export default {
     description: "وصف",
     examples: "أمثلة",
     link: "رابط",
-    pick: "أختر",
+    pick: "يمكنك اختيار خيار من الأسفل",
+    or_pick_custom: "أو يمكنك طلب حل برمجي مخصص",
   },
   templates: {
+    custom: {
+      name: "برامج مخصصة",
+      description: "حل برمجي مخصص، بناءً على احتياجاتك الخاصة",
+    },
     e_commerce: {
       name: "تجارة إلكترونية",
       description: "منصات إلكترونية لبيع وشراء السلع أو الخدمات",
