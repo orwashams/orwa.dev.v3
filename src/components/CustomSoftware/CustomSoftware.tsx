@@ -22,7 +22,7 @@ import {
 
 import { getCurrentLocale, getI18n } from "@/locales/server";
 
-import RequestForm from "../RequestForm/RequestForm";
+import ClientInquiryForm from "../ClientInquiryForm/ClientInquiryForm";
 
 import { cn } from "@/lib/utils";
 const CustomSoftware = async () => {
@@ -51,7 +51,7 @@ const CustomSoftware = async () => {
           <DialogHeader>
             <DialogTitle> {t("templates.custom.name")}</DialogTitle>
             <DialogDescription>
-              <RequestForm />
+              <ClientInquiryForm />
             </DialogDescription>
           </DialogHeader>
         </DialogContent>

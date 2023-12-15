@@ -14,6 +14,14 @@ export default {
     pick: "אתה יכול לבחור אפשרות מלמטה",
     or_pick_custom: "או שאתה יכול לבקש פתרון תוכנה מותאם אישית",
   },
+  form: {
+    your_name: "השם שלך",
+    your_email: "אימייל שלך",
+    your_phone: "מספר הטלפון שלך",
+    details: "פרטים",
+    note: "אנא כלול מידע רב ככל האפשר",
+    send: "שלח",
+  },
   templates: {
     custom: {
       name: "התאמה אישית",
@@ -256,9 +264,9 @@ export default {
           link: "https://www.xe.com/",
         },
         online_converter: {
-          name: "ממיר מקוון",
-          description: "ממירים מקוונים בחינם לקבצים ויחידות מידה שונות",
-          link: "https://www.onlineconverter.com/",
+          name: "YPAY",
+          description: "הפקת חשבוניות דיגיטליות",
+          link: "https://ypay.co.il/",
         },
       },
     },

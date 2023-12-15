@@ -14,6 +14,14 @@ export default {
     pick: "You can pick any option from the grid",
     or_pick_custom: "Or you can request a custom software solution",
   },
+  form: {
+    your_name: "Your Name",
+    your_email: "Your Email",
+    your_phone: "Your Phone Number",
+    details: "Details",
+    note: "Please include as much information as possible",
+    send: "Send",
+  },
   templates: {
     custom: {
       name: "Custom",
@@ -265,10 +273,9 @@ export default {
           link: "https://www.xe.com/",
         },
         online_converter: {
-          name: "Online Converter",
-          description:
-            "Free online converters for various files and units of measure",
-          link: "https://www.onlineconverter.com/",
+          name: "YPAY",
+          description: "Digital invoices",
+          link: "https://ypay.co.il/",
         },
       },
     },

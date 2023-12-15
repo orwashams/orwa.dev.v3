@@ -14,6 +14,14 @@ export default {
     pick: "يمكنك اختيار خيار من الأسفل",
     or_pick_custom: "أو يمكنك طلب حل برمجي مخصص",
   },
+  form: {
+    your_name: "اسمك",
+    your_email: "بريدك الإلكتروني",
+    your_phone: "رقم هاتفك",
+    details: "تفاصيل",
+    note: "يرجى إدراج أكبر قدر ممكن من المعلومات",
+    send: "إرسال",
+  },
   templates: {
     custom: {
       name: "برامج مخصصة",
@@ -263,10 +271,9 @@ export default {
           link: "https://www.xe.com/",
         },
         online_converter: {
-          name: "المحول عبر الإنترنت",
-          description:
-            "محولات مجانية عبر الإنترنت لمختلف الملفات ووحدات القياس",
-          link: "https://www.onlineconverter.com/",
+          name: "واي باي",
+          description: "إنتاج الفواتير الرقمية",
+          link: "https://ypay.co.il/",
         },
       },
     },

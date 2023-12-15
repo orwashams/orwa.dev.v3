@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ArrowDown } from "lucide-react";
-
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import {
   Card,
@@ -22,9 +21,10 @@ import {
 
 import { getCurrentLocale, getI18n } from "@/locales/server";
 
-import RequestForm from "../RequestForm/RequestForm";
+import ClientInquiryForm from "../ClientInquiryForm/ClientInquiryForm";
 
 import { cn } from "@/lib/utils";
+import { I18nProviderClient } from "@/locales/client";
 
 type Props = {
   name: string;
@@ -38,9 +38,10 @@ type Props = {
 
 const WebsiteCard = async ({ name, discription, examples }: Props) => {
   const t = await getI18n();
+  const locale = getCurrentLocale();
 
   return (
-    <div className=" hover:bg-gradient-to-tr from-red-400 via-red-500 to-red-900  p-0.5 rounded-md ">
+    <div className=" hover:bg-gray-800  p-[0.1rem] rounded-lg ">
       <Dialog>
         <DialogTrigger asChild>
           <Card
@@ -77,11 +78,21 @@ const WebsiteCard = async ({ name, discription, examples }: Props) => {
           </Card>
         </DialogTrigger>
 
-        <DialogContent>
+        <DialogContent className="p-9 ">
           <DialogHeader>
-            <DialogTitle>{name}</DialogTitle>
+            <DialogTitle
+              className={cn({
+                "font-english ": locale === "en",
+                "text-right font-hebrew  ": locale === "he",
+                "text-right font-arabic ": locale === "ar",
+              })}
+            >
+              {name}
+            </DialogTitle>
             <DialogDescription>
-              <RequestForm />
+              <I18nProviderClient locale={locale}>
+                <ClientInquiryForm />
+              </I18nProviderClient>
             </DialogDescription>
           </DialogHeader>
         </DialogContent>
