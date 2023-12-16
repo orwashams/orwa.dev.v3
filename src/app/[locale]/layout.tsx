@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   description:
     "Orwa, a freelancer, making website, mobile apps and custom software.",
 
-  icons: [{ rel: "icon", url: "/logo/white_svg.svg", sizes: "any" }],
+  icons: [{ rel: "icon", url: "/favicon.ico", sizes: "any" }],
 };
 
 export default function RootLayout({
