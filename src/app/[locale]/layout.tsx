@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
 import { Encode_Sans_Condensed, Vazirmatn, Rubik } from "next/font/google";
+
+import { Toaster } from "@/components/ui/toaster";
+import Footer from "@/components/Footer/Footer";
+
 import { cn } from "@/lib/utils";
 
-import "../globals.css";
 import { getCurrentLocale } from "@/locales/server";
+
+import "../globals.css";
 
 const encode_sans_condensed = Encode_Sans_Condensed({
   subsets: ["latin"],
@@ -50,6 +55,8 @@ export default function RootLayout({
         })}
       >
         {children}
+        <Footer />
+        <Toaster />
       </body>
     </html>
   );

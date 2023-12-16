@@ -21,7 +21,24 @@ export default {
     details: "פרטים",
     note: "אנא כלול מידע רב ככל האפשר",
     send: "שלח",
+    sending: "שולח...",
+    descriptions: {
+      name: "מ-2 ל-50 תווים",
+      email: "דוגמא: johndoe@example.com",
+      phone: "דוגמא: 0501234567",
+      details: "מ-10 ל-5000 תווים",
+    },
   },
+
+  toast_success: {
+    title: "הודעה נשלחה בהצלחה",
+    description: "תודה שבחרתם בנו, אחזור אליכם בהקדם האפשרי!",
+  },
+  toast_error: {
+    title: "אופס!",
+    description: "משהו השתבש",
+  },
+
   templates: {
     custom: {
       name: "התאמה אישית",

@@ -21,7 +21,24 @@ export default {
     details: "تفاصيل",
     note: "يرجى إدراج أكبر قدر ممكن من المعلومات",
     send: "إرسال",
+    sending: "جاري الإرسال...",
+    descriptions: {
+      name: "من 2 إلى 50 حرفًا",
+      email: "مثال: johndoe@example.com",
+      phone: "مثال: 0501234567",
+      details: "من 10 إلى 5000 حرف",
+    },
   },
+
+  toast_success: {
+    title: "تم إرسال الرسالة بنجاح",
+    description: "شكرًا لاختيارك لنا، سأعود إليك في أقرب وقت ممكن!",
+  },
+  toast_error: {
+    title: "عفوا!",
+    description: "حدث خطأ ما",
+  },
+
   templates: {
     custom: {
       name: "برامج مخصصة",

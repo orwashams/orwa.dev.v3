@@ -21,7 +21,25 @@ export default {
     details: "Details",
     note: "Please include as much information as possible",
     send: "Send",
+    sending: "Sending...",
+    descriptions: {
+      name: "from 2 - 50 characters",
+      email: "example: johndoe@example.com",
+      phone: "example: 0501234567",
+      details: "from 10 - 5000 characters",
+    },
   },
+
+  toast_success: {
+    title: "Message Sent Successfully",
+    description:
+      "Thank you for choosing us, I'll get back to you as soon as possible!",
+  },
+  toast_error: {
+    title: "Oops!",
+    description: "Something Went Wrong",
+  },
+
   templates: {
     custom: {
       name: "Custom",
