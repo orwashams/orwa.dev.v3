@@ -31,7 +31,7 @@ const CustomSoftware = async () => {
   const locale = getCurrentLocale();
 
   return (
-    <div className=" hover:bg-gradient-to-tr from-red-400 via-red-500 to-red-900  p-0.5 rounded-md ">
+    <div className="hover:bg-gray-800  p-[0.1rem] rounded-lg">
       <Dialog>
         <DialogTrigger asChild>
           <Card
