@@ -82,7 +82,7 @@ const WebsiteCard = async ({ name, discription, examples }: Props) => {
           <DialogHeader>
             <DialogTitle
               className={cn({
-                "font-english ": locale === "en",
+                "font-english text-left": locale === "en",
                 "text-right font-hebrew  ": locale === "he",
                 "text-right font-arabic ": locale === "ar",
               })}

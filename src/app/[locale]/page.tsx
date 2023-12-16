@@ -45,7 +45,7 @@ export default async function Home() {
         />
       </div>
 
-      <div className="text-center">
+      <div className="flex flex-col items-center gap-5 text-center">
         <p>{t("owner.description")}</p>
         <p>{t("owner.developer")}</p>
       </div>

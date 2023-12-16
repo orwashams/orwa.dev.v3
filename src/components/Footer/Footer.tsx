@@ -30,7 +30,7 @@ const Footer = () => {
         >
           <FacebookIcon size={iconSize} />
         </Link>
-        <Link href="https://www.instagram.com/orwa.s.shams/" target="_blank">
+        <Link href="https://www.instagram.com/orwadotdev/" target="_blank">
           <InstagramIcon size={iconSize} />
         </Link>
         <Link href="https://twitter.com/orwa_dev" target="_blank">

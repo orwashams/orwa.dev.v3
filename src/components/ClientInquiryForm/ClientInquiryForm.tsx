@@ -103,7 +103,7 @@ const ClientInquiryForm = () => {
       <form onSubmit={form.handleSubmit(onSubmit)}>
         <div
           className={cn("flex flex-col gap-4", {
-            "font-english ": locale === "en",
+            "font-english text-left": locale === "en",
             "text-right font-hebrew  ": locale === "he",
             "text-right font-arabic ": locale === "ar",
           })}
